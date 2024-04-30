@@ -7,3 +7,4 @@ TODO
 [ ] Swap timer states on timer end  
 [ ] Custom timers  
 [ ] Make profiles
+[ ] Make big letters
