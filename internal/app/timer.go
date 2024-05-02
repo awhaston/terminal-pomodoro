@@ -1,16 +1,18 @@
-package main
+package app
 
-import "strconv"
+import (
+	"strconv"
+)
 
-func initTimer(seconds, minutes, hours int) Timer {
+func InitTimer(seconds, minutes, hours int) Timer {
 	var timer Timer
 
-	setTimer(&timer, seconds, minutes, hours)
+	SetTimer(&timer, seconds, minutes, hours)
 
 	return timer
 }
 
-func setTimer(timer *Timer, seconds, minutes, hours int) {
+func SetTimer(timer *Timer, seconds, minutes, hours int) {
 	if seconds == 0 {
 		timer.seconds = 0
 	} else {
@@ -29,7 +31,7 @@ func setTimer(timer *Timer, seconds, minutes, hours int) {
 	}
 }
 
-func decTimer(timer *Timer) bool {
+func DecTimer(timer *Timer) bool {
 	var done bool
 
 	if timer.seconds-1 < 0 {
@@ -52,7 +54,7 @@ func decTimer(timer *Timer) bool {
 	return done
 }
 
-func getTimerOutput(timer *Timer) string {
+func GetTimerOutput(timer *Timer) string {
 	var output string
 
 	if timer.hours == 0 {

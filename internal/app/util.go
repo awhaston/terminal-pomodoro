@@ -1,4 +1,4 @@
-package main
+package app
 
 import (
 	"fmt"
@@ -12,7 +12,7 @@ func handleExit() {
 	os.Exit(1)
 }
 
-func initCleanup() {
+func InitCleanup() {
 	c := make(chan os.Signal)
 	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
 	go func() {
