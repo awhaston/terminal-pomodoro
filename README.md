@@ -3,8 +3,7 @@
 TODO
 
 [X] Make Timer work  
-[ ] Make timer states  
-[ ] Swap timer states on timer end  
+[X] Make timer states  
+[X] Swap timer states on timer end  
 [ ] Custom timers  
-[ ] Make profiles
 [ ] Make big letters
