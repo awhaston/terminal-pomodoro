@@ -58,7 +58,7 @@ func handleDone(state *ProgramState) {
 	}
 }
 
-func PomodoroInit() (*ProgramState, *UserSettings) {
+func Init() (*ProgramState, *UserSettings) {
 	InitCleanup()
 	state := ProgramState{
 		status: "study",
@@ -100,7 +100,7 @@ func PomodoroInit() (*ProgramState, *UserSettings) {
 	return &state, &settings
 }
 
-func PomodoroLoop(state *ProgramState, settings *UserSettings) {
+func Loop(state *ProgramState, settings *UserSettings) {
 	go getUserInput(state)
 	for {
 		newLoopPrint()
